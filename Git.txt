@@ -1,0 +1,20 @@
+<!-- AUDIO -->
+
+{block:Audio}
+<div id="audio"><div class="no"><img src="http://static.tumblr.com/k9utpfa/tcom8wpif/default_cover_m.jpg"></div>{block:AlbumArt}<div class="no"><img src="{AlbumArtURL}"></div>{/block:AlbumArt}<div class="playbox">{block:AudioPlayer}{AudioPlayerWhite}{/block:AudioPlayer}</div><div class="info"><b>Artist:</b> <span{block:Artist} style="display:none;"{/block:Artist}>Unknown</span>{block:Artist}{Artist}{/block:Artist}<br><b>Title:</b> <span{block:TrackName} style="display:none;"{/block:TrackName}>Unknown</span>{block:TrackName}{TrackName}{/block:TrackName}{block:PlayCount}<br><b>Plays:</b> {FormattedPlayCount}{/block:PlayCount}</div></div>
+{block:IndexPage}
+<br><br>
+<div id="perma"><a href="{ReblogURL}" target="_blank">reblog</a> | <a href="{Permalink}">{NoteCountWithLabel}</a></div>{/block:IndexPage}
+{/block:Audio}
+
+{block:ifshowmusicplayer}
+<div id="music">
+<div style="margin-left:42px;margin-top:10px;width:60px;overflow:hidden;">
+{text:music billy player code}</div>
+</div>
+{/block:ifshowmusicplayer}
+{block:ifshowplaylist}
+<div id="playlist">
+{text:playlist}
+</div>
+{/block:ifshowplaylist}
